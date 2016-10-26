@@ -26,6 +26,8 @@
 		BABD1B9D1DC135280084C954 /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */; };
 		BABD1B9E1DC135280084C954 /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8D1DC135280084C954 /* UITableView+UT.swift */; };
 		BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8E1DC135280084C954 /* UIView+UT.swift */; };
+		BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */; };
+		BABD1BA51DC15D9F0084C954 /* Dictionary+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,8 @@
 		BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B8D1DC135280084C954 /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B8E1DC135280084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
+		BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+UT.swift"; sourceTree = "<group>"; };
+		BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,6 +135,8 @@
 				BABD1B7F1DC135280084C954 /* CLLocation+UT.swift */,
 				BABD1B801DC135280084C954 /* CoreGraphics+UT.swift */,
 				BABD1B811DC135280084C954 /* Date+UT.swift */,
+				BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */,
+				BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */,
 				BABD1B821DC135280084C954 /* NSManagedObjectContext+UT.swift */,
 				BABD1B831DC135280084C954 /* NSMutableAttributedString+UT.swift */,
 				BABD1B841DC135280084C954 /* NSObject+UT.swift */,
@@ -290,10 +296,12 @@
 				BABD1B961DC135280084C954 /* String+UT.swift in Sources */,
 				BABD1B9A1DC135280084C954 /* UIDevice+UT.swift in Sources */,
 				BABD1B921DC135280084C954 /* Date+UT.swift in Sources */,
+				BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */,
 				BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */,
 				BABD1B8F1DC135280084C954 /* Array+UT.swift in Sources */,
 				BABD1B9D1DC135280084C954 /* UIScrollView+UT.swift in Sources */,
 				BABD1B911DC135280084C954 /* CoreGraphics+UT.swift in Sources */,
+				BABD1BA51DC15D9F0084C954 /* Dictionary+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				BABD1B971DC135280084C954 /* UIApplication+UT.swift in Sources */,
 				BABD1B9E1DC135280084C954 /* UITableView+UT.swift in Sources */,
