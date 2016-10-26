@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'UTSwiftUtils'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'A collection of useful Swift extensions'
 
   s.homepage         = 'https://github.com/dmorrow/UTSwiftUtils'
