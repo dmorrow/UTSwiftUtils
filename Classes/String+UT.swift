@@ -27,6 +27,25 @@ extension String {
         return trimmed
     }
     
+    public var glyphCount: Int {
+        let richText = NSAttributedString(string: self)
+        let line = CTLineCreateWithAttributedString(richText)
+        return CTLineGetGlyphCount(line)
+    }
+    
+    public var isSingleEmoji: Bool {
+        return glyphCount == 1 && containsEmoji
+    }
+    
+    public var containsEmoji: Bool {
+        return unicodeScalars.map { $0 }.filter { $0.isEmoji }.count != 0
+    }
+    
+    public var containsOnlyEmoji: Bool {
+        return characters.count > 0 && characters.count == unicodeScalars.map { $0 }.filter { $0.isEmoji }.count
+    }
+
+    
     @available(iOS 9, *)
     public func createLink(_ link: String, fontSize: CGFloat, linkColor:UIColor = UIColor.defaultBlue) -> NSMutableAttributedString {
         let linkString = NSMutableAttributedString(string: self)
@@ -39,5 +58,24 @@ extension String {
         linkString.endEditing()
 
         return linkString
+    }
+}
+
+
+
+extension UnicodeScalar {
+    
+    var isEmoji: Bool {
+        
+        switch value {
+        case 0x3030, 0x00AE, 0x00A9, // Special Characters
+        0x1D000 ... 0x1F77F, // Emoticons
+        0x2100 ... 0x27BF, // Misc symbols and Dingbats
+        0xFE00 ... 0xFE0F, // Variation Selectors:
+        0x1F900 ... 0x1F9FF: // Supplemental Symbols and Pictographs
+            return true
+            
+        default: return false
+        }
     }
 }
