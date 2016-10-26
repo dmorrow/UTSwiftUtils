@@ -28,6 +28,8 @@
 		BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8E1DC135280084C954 /* UIView+UT.swift */; };
 		BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */; };
 		BABD1BA51DC15D9F0084C954 /* Dictionary+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */; };
+		BABD1BA71DC15ED20084C954 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA61DC15ED20084C954 /* Reusable.swift */; };
+		BABD1BA91DC15F810084C954 /* UICollectionView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +59,8 @@
 		BABD1B8E1DC135280084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
 		BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+UT.swift"; sourceTree = "<group>"; };
 		BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UT.swift"; sourceTree = "<group>"; };
+		BABD1BA61DC15ED20084C954 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -140,8 +144,10 @@
 				BABD1B821DC135280084C954 /* NSManagedObjectContext+UT.swift */,
 				BABD1B831DC135280084C954 /* NSMutableAttributedString+UT.swift */,
 				BABD1B841DC135280084C954 /* NSObject+UT.swift */,
+				BABD1BA61DC15ED20084C954 /* Reusable.swift */,
 				BABD1B851DC135280084C954 /* String+UT.swift */,
 				BABD1B861DC135280084C954 /* UIApplication+UT.swift */,
+				BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */,
 				BABD1B871DC135280084C954 /* UICollectionViewLayout+UT.swift */,
 				BABD1B881DC135280084C954 /* UIColor+UT.swift */,
 				BABD1B891DC135280084C954 /* UIDevice+UT.swift */,
@@ -291,10 +297,12 @@
 				BABD1B941DC135280084C954 /* NSMutableAttributedString+UT.swift in Sources */,
 				BABD1B981DC135280084C954 /* UICollectionViewLayout+UT.swift in Sources */,
 				BABD1B9B1DC135280084C954 /* UIImage+UT.swift in Sources */,
+				BABD1BA71DC15ED20084C954 /* Reusable.swift in Sources */,
 				BABD1B991DC135280084C954 /* UIColor+UT.swift in Sources */,
 				BABD1B901DC135280084C954 /* CLLocation+UT.swift in Sources */,
 				BABD1B961DC135280084C954 /* String+UT.swift in Sources */,
 				BABD1B9A1DC135280084C954 /* UIDevice+UT.swift in Sources */,
+				BABD1BA91DC15F810084C954 /* UICollectionView+UT.swift in Sources */,
 				BABD1B921DC135280084C954 /* Date+UT.swift in Sources */,
 				BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */,
 				BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */,

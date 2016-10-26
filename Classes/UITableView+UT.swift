@@ -46,4 +46,20 @@ extension UITableView {
         self.scrollToRow(at: self.lastIndexPath(), at: .bottom, animated: animated)
     }
     
+    public func register<T: UITableViewCell>(_: T.Type) where T: Reusable, T:NibLoadableView {
+        let nib = UINib(nibName: T.nibName, bundle: nil)
+        register(nib, forCellReuseIdentifier: T.identifier)
+    }
+    
+    public func register<T: UITableViewCell>(_: T.Type) where T:Reusable {
+        register(T.self, forCellReuseIdentifier: T.identifier)
+    }
+    
+    public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: Reusable {
+        guard let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
+            fatalError("Could not dequeue cell with identifier: \(T.identifier)")
+        }
+        return cell
+    }
+    
 }
