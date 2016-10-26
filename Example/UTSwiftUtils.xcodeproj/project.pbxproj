@@ -26,7 +26,6 @@
 		BABD1B9D1DC135280084C954 /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */; };
 		BABD1B9E1DC135280084C954 /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8D1DC135280084C954 /* UITableView+UT.swift */; };
 		BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8E1DC135280084C954 /* UIView+UT.swift */; };
-		BABD1BA11DC135C60084C954 /* .swift_version in Resources */ = {isa = PBXBuildFile; fileRef = BABD1BA01DC135C60084C954 /* .swift_version */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,7 +53,6 @@
 		BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B8D1DC135280084C954 /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B8E1DC135280084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
-		BABD1BA01DC135C60084C954 /* .swift_version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .swift_version; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -82,7 +80,6 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
-				BABD1BA01DC135C60084C954 /* .swift_version */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				BABD1B551DBFF9EB0084C954 /* Classes */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -224,7 +221,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABD1BA11DC135C60084C954 /* .swift_version in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
