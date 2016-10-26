@@ -9,13 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'UTSwiftUtils'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of UTSwiftUtils.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
+  s.summary          = 'A collection of useful Swift extensions'
 
   s.description      = <<-DESC
 TODO: Add long description of the pod here.
@@ -32,11 +26,4 @@ TODO: Add long description of the pod here.
 
   s.source_files = 'UTSwiftUtils/Classes/**/*'
   
-  # s.resource_bundles = {
-  #   'UTSwiftUtils' => ['UTSwiftUtils/Assets/*.png']
-  # }
-
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
