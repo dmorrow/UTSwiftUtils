@@ -16,7 +16,7 @@
 		BABD1B6F1DC000710084C954 /* NSManagedObjectContext+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */; };
 		BABD1B701DC000710084C954 /* NSMutableAttributedString+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */; };
 		BABD1B721DC000710084C954 /* NSObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5F1DC000710084C954 /* NSObject+UT.swift */; };
-		BABD1B731DC000710084C954 /* SDKAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B601DC000710084C954 /* SDKAvailability.swift */; };
+		BABD1B731DC000710084C954 /* UIApplication+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B601DC000710084C954 /* UIApplication+UT.swift */; };
 		BABD1B741DC000710084C954 /* String+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B611DC000710084C954 /* String+UT.swift */; };
 		BABD1B751DC000710084C954 /* UICollectionViewLayout+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */; };
 		BABD1B761DC000710084C954 /* UIColor+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B631DC000710084C954 /* UIColor+UT.swift */; };
@@ -25,6 +25,7 @@
 		BABD1B791DC000710084C954 /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B661DC000710084C954 /* UIScrollView+UT.swift */; };
 		BABD1B7A1DC000710084C954 /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B671DC000710084C954 /* UITableView+UT.swift */; };
 		BABD1B7B1DC000710084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B681DC000710084C954 /* UIView+UT.swift */; };
+		BABD1B7D1DC1340E0084C954 /* UIDevice+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B7C1DC1340E0084C954 /* UIDevice+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,7 @@
 		BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+UT.swift"; sourceTree = "<group>"; };
 		BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+UT.swift"; sourceTree = "<group>"; };
 		BABD1B5F1DC000710084C954 /* NSObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+UT.swift"; sourceTree = "<group>"; };
-		BABD1B601DC000710084C954 /* SDKAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKAvailability.swift; sourceTree = "<group>"; };
+		BABD1B601DC000710084C954 /* UIApplication+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+UT.swift"; sourceTree = "<group>"; };
 		BABD1B611DC000710084C954 /* String+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UT.swift"; sourceTree = "<group>"; };
 		BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+UT.swift"; sourceTree = "<group>"; };
 		BABD1B631DC000710084C954 /* UIColor+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+UT.swift"; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 		BABD1B661DC000710084C954 /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B671DC000710084C954 /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
 		BABD1B681DC000710084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
+		BABD1B7C1DC1340E0084C954 /* UIDevice+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -132,10 +134,11 @@
 				BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */,
 				BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */,
 				BABD1B5F1DC000710084C954 /* NSObject+UT.swift */,
-				BABD1B601DC000710084C954 /* SDKAvailability.swift */,
 				BABD1B611DC000710084C954 /* String+UT.swift */,
+				BABD1B601DC000710084C954 /* UIApplication+UT.swift */,
 				BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */,
 				BABD1B631DC000710084C954 /* UIColor+UT.swift */,
+				BABD1B7C1DC1340E0084C954 /* UIDevice+UT.swift */,
 				BABD1B641DC000710084C954 /* UIImage+UT.swift */,
 				BABD1B651DC000710084C954 /* UINavigationBar+UT.swift */,
 				BABD1B661DC000710084C954 /* UIScrollView+UT.swift */,
@@ -288,10 +291,11 @@
 				BABD1B701DC000710084C954 /* NSMutableAttributedString+UT.swift in Sources */,
 				BABD1B7A1DC000710084C954 /* UITableView+UT.swift in Sources */,
 				BABD1B691DC000710084C954 /* Array+UT.swift in Sources */,
-				BABD1B731DC000710084C954 /* SDKAvailability.swift in Sources */,
+				BABD1B731DC000710084C954 /* UIApplication+UT.swift in Sources */,
 				BABD1B6C1DC000710084C954 /* CoreGraphics+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 				BABD1B781DC000710084C954 /* UINavigationBar+UT.swift in Sources */,
+				BABD1B7D1DC1340E0084C954 /* UIDevice+UT.swift in Sources */,
 				BABD1B751DC000710084C954 /* UICollectionViewLayout+UT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
