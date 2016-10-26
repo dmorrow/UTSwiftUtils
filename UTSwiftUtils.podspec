@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
 TODO: Add long description of the pod here.
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/UTSwiftUtils'
+  s.homepage         = 'https://github.com/dmorrow/UTSwiftUtils'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Danny Morrow' => 'danny@unitytheory.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/UTSwiftUtils.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/dmorrow/UTSwiftUtils.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'UTSwiftUtils/Classes/**/*'
   

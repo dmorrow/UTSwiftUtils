@@ -9,6 +9,22 @@
 /* Begin PBXBuildFile section */
 		3F259053F9E3B59A3B2BDEEA /* Pods_UTSwiftUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF5F913872131A21E6AA672 /* Pods_UTSwiftUtils_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BABD1B691DC000710084C954 /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B561DC000710084C954 /* Array+UT.swift */; };
+		BABD1B6A1DC000710084C954 /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B571DC000710084C954 /* CLLocation+UT.swift */; };
+		BABD1B6C1DC000710084C954 /* CoreGraphics+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B591DC000710084C954 /* CoreGraphics+UT.swift */; };
+		BABD1B6E1DC000710084C954 /* Date+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5B1DC000710084C954 /* Date+UT.swift */; };
+		BABD1B6F1DC000710084C954 /* NSManagedObjectContext+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */; };
+		BABD1B701DC000710084C954 /* NSMutableAttributedString+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */; };
+		BABD1B721DC000710084C954 /* NSObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B5F1DC000710084C954 /* NSObject+UT.swift */; };
+		BABD1B731DC000710084C954 /* SDKAvailability.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B601DC000710084C954 /* SDKAvailability.swift */; };
+		BABD1B741DC000710084C954 /* String+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B611DC000710084C954 /* String+UT.swift */; };
+		BABD1B751DC000710084C954 /* UICollectionViewLayout+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */; };
+		BABD1B761DC000710084C954 /* UIColor+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B631DC000710084C954 /* UIColor+UT.swift */; };
+		BABD1B771DC000710084C954 /* UIImage+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B641DC000710084C954 /* UIImage+UT.swift */; };
+		BABD1B781DC000710084C954 /* UINavigationBar+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B651DC000710084C954 /* UINavigationBar+UT.swift */; };
+		BABD1B791DC000710084C954 /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B661DC000710084C954 /* UIScrollView+UT.swift */; };
+		BABD1B7A1DC000710084C954 /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B671DC000710084C954 /* UITableView+UT.swift */; };
+		BABD1B7B1DC000710084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B681DC000710084C954 /* UIView+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +35,22 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9F1EC58FC294F7E222D36FF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A9DE93C5DED9986FF7E2E4DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BABD1B561DC000710084C954 /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
+		BABD1B571DC000710084C954 /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
+		BABD1B591DC000710084C954 /* CoreGraphics+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+UT.swift"; sourceTree = "<group>"; };
+		BABD1B5B1DC000710084C954 /* Date+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+UT.swift"; sourceTree = "<group>"; };
+		BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+UT.swift"; sourceTree = "<group>"; };
+		BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+UT.swift"; sourceTree = "<group>"; };
+		BABD1B5F1DC000710084C954 /* NSObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+UT.swift"; sourceTree = "<group>"; };
+		BABD1B601DC000710084C954 /* SDKAvailability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDKAvailability.swift; sourceTree = "<group>"; };
+		BABD1B611DC000710084C954 /* String+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UT.swift"; sourceTree = "<group>"; };
+		BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+UT.swift"; sourceTree = "<group>"; };
+		BABD1B631DC000710084C954 /* UIColor+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+UT.swift"; sourceTree = "<group>"; };
+		BABD1B641DC000710084C954 /* UIImage+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+UT.swift"; sourceTree = "<group>"; };
+		BABD1B651DC000710084C954 /* UINavigationBar+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+UT.swift"; sourceTree = "<group>"; };
+		BABD1B661DC000710084C954 /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
+		BABD1B671DC000710084C954 /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
+		BABD1B681DC000710084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -47,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
+				BABD1B551DBFF9EB0084C954 /* Classes */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DC6398E4968B607D44E5B85C /* Pods */,
@@ -89,6 +122,30 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
+		BABD1B551DBFF9EB0084C954 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BABD1B561DC000710084C954 /* Array+UT.swift */,
+				BABD1B571DC000710084C954 /* CLLocation+UT.swift */,
+				BABD1B591DC000710084C954 /* CoreGraphics+UT.swift */,
+				BABD1B5B1DC000710084C954 /* Date+UT.swift */,
+				BABD1B5C1DC000710084C954 /* NSManagedObjectContext+UT.swift */,
+				BABD1B5D1DC000710084C954 /* NSMutableAttributedString+UT.swift */,
+				BABD1B5F1DC000710084C954 /* NSObject+UT.swift */,
+				BABD1B601DC000710084C954 /* SDKAvailability.swift */,
+				BABD1B611DC000710084C954 /* String+UT.swift */,
+				BABD1B621DC000710084C954 /* UICollectionViewLayout+UT.swift */,
+				BABD1B631DC000710084C954 /* UIColor+UT.swift */,
+				BABD1B641DC000710084C954 /* UIImage+UT.swift */,
+				BABD1B651DC000710084C954 /* UINavigationBar+UT.swift */,
+				BABD1B661DC000710084C954 /* UIScrollView+UT.swift */,
+				BABD1B671DC000710084C954 /* UITableView+UT.swift */,
+				BABD1B681DC000710084C954 /* UIView+UT.swift */,
+			);
+			name = Classes;
+			path = ../Classes;
+			sourceTree = "<group>";
+		};
 		DC6398E4968B607D44E5B85C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,11 +185,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0720;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
 				};
@@ -218,7 +276,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BABD1B791DC000710084C954 /* UIScrollView+UT.swift in Sources */,
+				BABD1B771DC000710084C954 /* UIImage+UT.swift in Sources */,
+				BABD1B6F1DC000710084C954 /* NSManagedObjectContext+UT.swift in Sources */,
+				BABD1B7B1DC000710084C954 /* UIView+UT.swift in Sources */,
+				BABD1B6E1DC000710084C954 /* Date+UT.swift in Sources */,
+				BABD1B721DC000710084C954 /* NSObject+UT.swift in Sources */,
+				BABD1B6A1DC000710084C954 /* CLLocation+UT.swift in Sources */,
+				BABD1B761DC000710084C954 /* UIColor+UT.swift in Sources */,
+				BABD1B741DC000710084C954 /* String+UT.swift in Sources */,
+				BABD1B701DC000710084C954 /* NSMutableAttributedString+UT.swift in Sources */,
+				BABD1B7A1DC000710084C954 /* UITableView+UT.swift in Sources */,
+				BABD1B691DC000710084C954 /* Array+UT.swift in Sources */,
+				BABD1B731DC000710084C954 /* SDKAvailability.swift in Sources */,
+				BABD1B6C1DC000710084C954 /* CoreGraphics+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BABD1B781DC000710084C954 /* UINavigationBar+UT.swift in Sources */,
+				BABD1B751DC000710084C954 /* UICollectionViewLayout+UT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -238,8 +312,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -283,8 +359,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -303,6 +381,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -311,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -323,6 +403,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -330,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 50E49962D2498F57998F32ED /* Pods-UTSwiftUtils_Tests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -338,6 +420,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
