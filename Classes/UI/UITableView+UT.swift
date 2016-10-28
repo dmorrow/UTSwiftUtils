@@ -46,6 +46,8 @@ extension UITableView {
         self.scrollToRow(at: self.lastIndexPath(), at: .bottom, animated: animated)
     }
     
+//MARK: - Reusable cells
+    
     public func register<T: UITableViewCell>(_: T.Type) where T: Reusable, T:NibLoadableView {
         let nib = UINib(nibName: T.nibName, bundle: nil)
         register(nib, forCellReuseIdentifier: T.identifier)
@@ -55,11 +57,27 @@ extension UITableView {
         register(T.self, forCellReuseIdentifier: T.identifier)
     }
     
+    public func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T: Reusable, T:NibLoadableView {
+        let nib = UINib(nibName: T.nibName, bundle: nil)
+        register(nib, forHeaderFooterViewReuseIdentifier: T.identifier)
+    }
+    
+    public func registerHeaderFooterView<T: UITableViewHeaderFooterView>(_: T.Type) where T:Reusable {
+        register(T.self, forHeaderFooterViewReuseIdentifier: T.identifier)
+    }   
+    
     public func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: Reusable {
         guard let cell = dequeueReusableCell(withIdentifier: T.identifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.identifier)")
         }
         return cell
+    }
+    
+    public func dequeueReusableHeaderFooterView<T: UITableViewHeaderFooterView>() -> T where T: Reusable {
+        guard let headerFooter = dequeueReusableHeaderFooterView(withIdentifier: T.identifier) as? T else {
+            fatalError("Could not dequeue header footer view with identifier: \(T.identifier)")
+        }
+        return headerFooter
     }
     
 }

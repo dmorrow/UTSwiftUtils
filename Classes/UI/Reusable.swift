@@ -23,6 +23,7 @@ extension NibLoadableView where Self: UIView {
     public static var nibName: String {
         return String(describing: self)
     }
+    
     public static func viewWithNib<T>(owner:AnyObject) -> T {
         let topLevelObjects = Bundle.main.loadNibNamed(self.nibName, owner: owner)
         return topLevelObjects?.first! as! T

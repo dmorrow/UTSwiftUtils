@@ -9,27 +9,27 @@
 /* Begin PBXBuildFile section */
 		3F259053F9E3B59A3B2BDEEA /* Pods_UTSwiftUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF5F913872131A21E6AA672 /* Pods_UTSwiftUtils_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
-		BABD1B8F1DC135280084C954 /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B7E1DC135280084C954 /* Array+UT.swift */; };
-		BABD1B901DC135280084C954 /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B7F1DC135280084C954 /* CLLocation+UT.swift */; };
-		BABD1B911DC135280084C954 /* CoreGraphics+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B801DC135280084C954 /* CoreGraphics+UT.swift */; };
-		BABD1B921DC135280084C954 /* Date+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B811DC135280084C954 /* Date+UT.swift */; };
-		BABD1B931DC135280084C954 /* NSManagedObjectContext+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B821DC135280084C954 /* NSManagedObjectContext+UT.swift */; };
-		BABD1B941DC135280084C954 /* NSMutableAttributedString+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B831DC135280084C954 /* NSMutableAttributedString+UT.swift */; };
-		BABD1B951DC135280084C954 /* NSObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B841DC135280084C954 /* NSObject+UT.swift */; };
-		BABD1B961DC135280084C954 /* String+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B851DC135280084C954 /* String+UT.swift */; };
-		BABD1B971DC135280084C954 /* UIApplication+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B861DC135280084C954 /* UIApplication+UT.swift */; };
-		BABD1B981DC135280084C954 /* UICollectionViewLayout+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B871DC135280084C954 /* UICollectionViewLayout+UT.swift */; };
-		BABD1B991DC135280084C954 /* UIColor+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B881DC135280084C954 /* UIColor+UT.swift */; };
-		BABD1B9A1DC135280084C954 /* UIDevice+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B891DC135280084C954 /* UIDevice+UT.swift */; };
-		BABD1B9B1DC135280084C954 /* UIImage+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8A1DC135280084C954 /* UIImage+UT.swift */; };
-		BABD1B9C1DC135280084C954 /* UINavigationBar+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8B1DC135280084C954 /* UINavigationBar+UT.swift */; };
-		BABD1B9D1DC135280084C954 /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */; };
-		BABD1B9E1DC135280084C954 /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8D1DC135280084C954 /* UITableView+UT.swift */; };
-		BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1B8E1DC135280084C954 /* UIView+UT.swift */; };
-		BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */; };
-		BABD1BA51DC15D9F0084C954 /* Dictionary+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */; };
-		BABD1BA71DC15ED20084C954 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA61DC15ED20084C954 /* Reusable.swift */; };
-		BABD1BA91DC15F810084C954 /* UICollectionView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */; };
+		BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */; };
+		BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */; };
+		BAB73AC81DC3AD8D0020E7DB /* CoreGraphics+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */; };
+		BAB73AC91DC3AD8D0020E7DB /* Date+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB61DC3AD8D0020E7DB /* Date+UT.swift */; };
+		BAB73ACA1DC3AD8D0020E7DB /* Dictionary+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB71DC3AD8D0020E7DB /* Dictionary+UT.swift */; };
+		BAB73ACB1DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB81DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift */; };
+		BAB73ACC1DC3AD8D0020E7DB /* NSObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB91DC3AD8D0020E7DB /* NSObject+UT.swift */; };
+		BAB73ACE1DC3AD8D0020E7DB /* String+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73ABB1DC3AD8D0020E7DB /* String+UT.swift */; };
+		BAB73ADB1DC3AD970020E7DB /* NSManagedObject+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AD91DC3AD970020E7DB /* NSManagedObject+UT.swift */; };
+		BAB73ADC1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73ADA1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift */; };
+		BAB73AE91DC3AF7F0020E7DB /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73ADE1DC3AF7F0020E7DB /* Reusable.swift */; };
+		BAB73AEA1DC3AF7F0020E7DB /* UIApplication+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73ADF1DC3AF7F0020E7DB /* UIApplication+UT.swift */; };
+		BAB73AEB1DC3AF7F0020E7DB /* UICollectionView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE01DC3AF7F0020E7DB /* UICollectionView+UT.swift */; };
+		BAB73AEC1DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE11DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift */; };
+		BAB73AED1DC3AF7F0020E7DB /* UIColor+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE21DC3AF7F0020E7DB /* UIColor+UT.swift */; };
+		BAB73AEE1DC3AF7F0020E7DB /* UIDevice+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE31DC3AF7F0020E7DB /* UIDevice+UT.swift */; };
+		BAB73AEF1DC3AF7F0020E7DB /* UIImage+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE41DC3AF7F0020E7DB /* UIImage+UT.swift */; };
+		BAB73AF01DC3AF7F0020E7DB /* UINavigationBar+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE51DC3AF7F0020E7DB /* UINavigationBar+UT.swift */; };
+		BAB73AF11DC3AF7F0020E7DB /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */; };
+		BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */; };
+		BAB73AF31DC3AF7F0020E7DB /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,27 +40,27 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9F1EC58FC294F7E222D36FF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A9DE93C5DED9986FF7E2E4DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
-		BABD1B7E1DC135280084C954 /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
-		BABD1B7F1DC135280084C954 /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
-		BABD1B801DC135280084C954 /* CoreGraphics+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+UT.swift"; sourceTree = "<group>"; };
-		BABD1B811DC135280084C954 /* Date+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+UT.swift"; sourceTree = "<group>"; };
-		BABD1B821DC135280084C954 /* NSManagedObjectContext+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+UT.swift"; sourceTree = "<group>"; };
-		BABD1B831DC135280084C954 /* NSMutableAttributedString+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+UT.swift"; sourceTree = "<group>"; };
-		BABD1B841DC135280084C954 /* NSObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+UT.swift"; sourceTree = "<group>"; };
-		BABD1B851DC135280084C954 /* String+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UT.swift"; sourceTree = "<group>"; };
-		BABD1B861DC135280084C954 /* UIApplication+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+UT.swift"; sourceTree = "<group>"; };
-		BABD1B871DC135280084C954 /* UICollectionViewLayout+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+UT.swift"; sourceTree = "<group>"; };
-		BABD1B881DC135280084C954 /* UIColor+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+UT.swift"; sourceTree = "<group>"; };
-		BABD1B891DC135280084C954 /* UIDevice+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+UT.swift"; sourceTree = "<group>"; };
-		BABD1B8A1DC135280084C954 /* UIImage+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+UT.swift"; sourceTree = "<group>"; };
-		BABD1B8B1DC135280084C954 /* UINavigationBar+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+UT.swift"; sourceTree = "<group>"; };
-		BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
-		BABD1B8D1DC135280084C954 /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
-		BABD1B8E1DC135280084C954 /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
-		BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+UT.swift"; sourceTree = "<group>"; };
-		BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UT.swift"; sourceTree = "<group>"; };
-		BABD1BA61DC15ED20084C954 /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
-		BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB61DC3AD8D0020E7DB /* Date+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB71DC3AD8D0020E7DB /* Dictionary+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB81DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableAttributedString+UT.swift"; sourceTree = "<group>"; };
+		BAB73AB91DC3AD8D0020E7DB /* NSObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSObject+UT.swift"; sourceTree = "<group>"; };
+		BAB73ABB1DC3AD8D0020E7DB /* String+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+UT.swift"; sourceTree = "<group>"; };
+		BAB73AD91DC3AD970020E7DB /* NSManagedObject+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObject+UT.swift"; sourceTree = "<group>"; };
+		BAB73ADA1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSManagedObjectContext+UT.swift"; sourceTree = "<group>"; };
+		BAB73ADE1DC3AF7F0020E7DB /* Reusable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		BAB73ADF1DC3AF7F0020E7DB /* UIApplication+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIApplication+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE01DC3AF7F0020E7DB /* UICollectionView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionView+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE11DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UICollectionViewLayout+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE21DC3AF7F0020E7DB /* UIColor+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE31DC3AF7F0020E7DB /* UIDevice+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE41DC3AF7F0020E7DB /* UIImage+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE51DC3AF7F0020E7DB /* UINavigationBar+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
+		BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -89,7 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				BABD1B551DBFF9EB0084C954 /* Classes */,
+				BAB73A841DC3AD490020E7DB /* Classes */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				DC6398E4968B607D44E5B85C /* Pods */,
@@ -132,33 +132,57 @@
 			name = "Podspec Metadata";
 			sourceTree = "<group>";
 		};
-		BABD1B551DBFF9EB0084C954 /* Classes */ = {
+		BAB73A841DC3AD490020E7DB /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BABD1B7E1DC135280084C954 /* Array+UT.swift */,
-				BABD1B7F1DC135280084C954 /* CLLocation+UT.swift */,
-				BABD1B801DC135280084C954 /* CoreGraphics+UT.swift */,
-				BABD1B811DC135280084C954 /* Date+UT.swift */,
-				BABD1BA41DC15D9F0084C954 /* Dictionary+UT.swift */,
-				BABD1BA21DC15C620084C954 /* NSManagedObject+UT.swift */,
-				BABD1B821DC135280084C954 /* NSManagedObjectContext+UT.swift */,
-				BABD1B831DC135280084C954 /* NSMutableAttributedString+UT.swift */,
-				BABD1B841DC135280084C954 /* NSObject+UT.swift */,
-				BABD1BA61DC15ED20084C954 /* Reusable.swift */,
-				BABD1B851DC135280084C954 /* String+UT.swift */,
-				BABD1B861DC135280084C954 /* UIApplication+UT.swift */,
-				BABD1BA81DC15F810084C954 /* UICollectionView+UT.swift */,
-				BABD1B871DC135280084C954 /* UICollectionViewLayout+UT.swift */,
-				BABD1B881DC135280084C954 /* UIColor+UT.swift */,
-				BABD1B891DC135280084C954 /* UIDevice+UT.swift */,
-				BABD1B8A1DC135280084C954 /* UIImage+UT.swift */,
-				BABD1B8B1DC135280084C954 /* UINavigationBar+UT.swift */,
-				BABD1B8C1DC135280084C954 /* UIScrollView+UT.swift */,
-				BABD1B8D1DC135280084C954 /* UITableView+UT.swift */,
-				BABD1B8E1DC135280084C954 /* UIView+UT.swift */,
+				BAB73A861DC3AD490020E7DB /* Base */,
+				BAB73A9A1DC3AD490020E7DB /* CoreData */,
+				BAB73ADD1DC3AF7F0020E7DB /* UI */,
 			);
 			name = Classes;
 			path = ../Classes;
+			sourceTree = "<group>";
+		};
+		BAB73A861DC3AD490020E7DB /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */,
+				BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */,
+				BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */,
+				BAB73AB61DC3AD8D0020E7DB /* Date+UT.swift */,
+				BAB73AB71DC3AD8D0020E7DB /* Dictionary+UT.swift */,
+				BAB73AB81DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift */,
+				BAB73AB91DC3AD8D0020E7DB /* NSObject+UT.swift */,
+				BAB73ABB1DC3AD8D0020E7DB /* String+UT.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		BAB73A9A1DC3AD490020E7DB /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BAB73AD91DC3AD970020E7DB /* NSManagedObject+UT.swift */,
+				BAB73ADA1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		BAB73ADD1DC3AF7F0020E7DB /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BAB73ADE1DC3AF7F0020E7DB /* Reusable.swift */,
+				BAB73ADF1DC3AF7F0020E7DB /* UIApplication+UT.swift */,
+				BAB73AE01DC3AF7F0020E7DB /* UICollectionView+UT.swift */,
+				BAB73AE11DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift */,
+				BAB73AE21DC3AF7F0020E7DB /* UIColor+UT.swift */,
+				BAB73AE31DC3AF7F0020E7DB /* UIDevice+UT.swift */,
+				BAB73AE41DC3AF7F0020E7DB /* UIImage+UT.swift */,
+				BAB73AE51DC3AF7F0020E7DB /* UINavigationBar+UT.swift */,
+				BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */,
+				BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */,
+				BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 		DC6398E4968B607D44E5B85C /* Pods */ = {
@@ -291,28 +315,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BABD1B951DC135280084C954 /* NSObject+UT.swift in Sources */,
-				BABD1B931DC135280084C954 /* NSManagedObjectContext+UT.swift in Sources */,
-				BABD1B9C1DC135280084C954 /* UINavigationBar+UT.swift in Sources */,
-				BABD1B941DC135280084C954 /* NSMutableAttributedString+UT.swift in Sources */,
-				BABD1B981DC135280084C954 /* UICollectionViewLayout+UT.swift in Sources */,
-				BABD1B9B1DC135280084C954 /* UIImage+UT.swift in Sources */,
-				BABD1BA71DC15ED20084C954 /* Reusable.swift in Sources */,
-				BABD1B991DC135280084C954 /* UIColor+UT.swift in Sources */,
-				BABD1B901DC135280084C954 /* CLLocation+UT.swift in Sources */,
-				BABD1B961DC135280084C954 /* String+UT.swift in Sources */,
-				BABD1B9A1DC135280084C954 /* UIDevice+UT.swift in Sources */,
-				BABD1BA91DC15F810084C954 /* UICollectionView+UT.swift in Sources */,
-				BABD1B921DC135280084C954 /* Date+UT.swift in Sources */,
-				BABD1BA31DC15C620084C954 /* NSManagedObject+UT.swift in Sources */,
-				BABD1B9F1DC135280084C954 /* UIView+UT.swift in Sources */,
-				BABD1B8F1DC135280084C954 /* Array+UT.swift in Sources */,
-				BABD1B9D1DC135280084C954 /* UIScrollView+UT.swift in Sources */,
-				BABD1B911DC135280084C954 /* CoreGraphics+UT.swift in Sources */,
-				BABD1BA51DC15D9F0084C954 /* Dictionary+UT.swift in Sources */,
+				BAB73AE91DC3AF7F0020E7DB /* Reusable.swift in Sources */,
+				BAB73AEA1DC3AF7F0020E7DB /* UIApplication+UT.swift in Sources */,
+				BAB73ACC1DC3AD8D0020E7DB /* NSObject+UT.swift in Sources */,
+				BAB73AF31DC3AF7F0020E7DB /* UIView+UT.swift in Sources */,
+				BAB73ACE1DC3AD8D0020E7DB /* String+UT.swift in Sources */,
+				BAB73AF01DC3AF7F0020E7DB /* UINavigationBar+UT.swift in Sources */,
+				BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */,
+				BAB73ACA1DC3AD8D0020E7DB /* Dictionary+UT.swift in Sources */,
+				BAB73AC81DC3AD8D0020E7DB /* CoreGraphics+UT.swift in Sources */,
+				BAB73AEE1DC3AF7F0020E7DB /* UIDevice+UT.swift in Sources */,
+				BAB73ADB1DC3AD970020E7DB /* NSManagedObject+UT.swift in Sources */,
+				BAB73AEF1DC3AF7F0020E7DB /* UIImage+UT.swift in Sources */,
+				BAB73AEC1DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift in Sources */,
+				BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */,
+				BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */,
+				BAB73AEB1DC3AF7F0020E7DB /* UICollectionView+UT.swift in Sources */,
+				BAB73AC91DC3AD8D0020E7DB /* Date+UT.swift in Sources */,
+				BAB73AED1DC3AF7F0020E7DB /* UIColor+UT.swift in Sources */,
+				BAB73AF11DC3AF7F0020E7DB /* UIScrollView+UT.swift in Sources */,
+				BAB73ADC1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift in Sources */,
+				BAB73ACB1DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
-				BABD1B971DC135280084C954 /* UIApplication+UT.swift in Sources */,
-				BABD1B9E1DC135280084C954 /* UITableView+UT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
