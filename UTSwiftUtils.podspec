@@ -23,12 +23,12 @@ Pod::Spec.new do |s|
 
   s.subspec 'Base' do |base|
   # subspec for no CoreData
-    base.source_files = 'UTSwiftUtils/Classes/{Base,UI}/**/*'
+    base.source_files = 'Classes/{Base,UI}/**/*'
     base.frameworks = 'UIKit'
   end
 
   s.subspec 'CoreData' do |coredata|
-    coredata.source_files = 'UTSwiftUtils/Classes/CoreData/**/*'
+    coredata.source_files = 'Classes/CoreData/**/*'
     coredata.frameworks = 'CoreData'
   end
 
