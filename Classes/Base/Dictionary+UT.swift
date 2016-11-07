@@ -18,12 +18,19 @@ extension Dictionary {
         return mutableCopy
     }
     
-    static func + <K,V> (left: Dictionary<K,V>, right: Dictionary<K,V>?) -> Dictionary<K,V> {
+    static func + <Key:Hashable,Value:Any> (left: Dictionary<Key,Value>, right: Dictionary<Key,Value>?) -> Dictionary<Key,Value> {
         guard let right = right else { return left }
         return left.reduce(right) {
-            var new = $0 as [K:V]
+            var new = $0
             new.updateValue($1.1, forKey: $1.0)
             return new
         }
+    }
+    
+    static func += <Key:Hashable,Value:Any> ( left: inout Dictionary<Key,Value>, right: Dictionary<Key,Value>) {
+        for (k,v) in right {
+            left.updateValue(v, forKey: k)
+            return
+        } 
     }
 }
