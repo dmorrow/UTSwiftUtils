@@ -29,7 +29,7 @@ Pod::Spec.new do |s|
 
   s.subspec 'CoreData' do |coredata|
     coredata.source_files = 'Classes/CoreData/**/*'
-    coredata.frameworks = 'CoreData'
+    coredata.frameworks = 'UIKit', 'CoreData'
   end
 
 end
