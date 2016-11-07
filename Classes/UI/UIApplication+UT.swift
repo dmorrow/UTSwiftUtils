@@ -72,8 +72,13 @@ extension UIApplication {
         return cl
     }
     
+    open class func deviceSpecificClass<T>(for className:String)->T? {
+        let name = UIApplication.deviceSpecificClassName(baseClass: className)
+        return NSClassFromString(name) as? T
+    }
+    
     open class func deviceSpecificClassName(baseClass className: String)-> String {
-        if (UIDevice.isIPad) {
+        if UIDevice.isIPad {
             let iPadClassName = className + "iPad"
             if let _ = NSClassFromString(iPadClassName) {
                 return iPadClassName
