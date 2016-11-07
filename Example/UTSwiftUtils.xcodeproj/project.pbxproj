@@ -30,6 +30,7 @@
 		BAB73AF11DC3AF7F0020E7DB /* UIScrollView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */; };
 		BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */; };
 		BAB73AF31DC3AF7F0020E7DB /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */; };
+		BAF93AA71DCC1EE0006B147D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF93AA61DCC1EE0006B147D /* Router.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIScrollView+UT.swift"; sourceTree = "<group>"; };
 		BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
 		BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
+		BAF93AA61DCC1EE0006B147D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 				BAB73AB71DC3AD8D0020E7DB /* Dictionary+UT.swift */,
 				BAB73AB81DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift */,
 				BAB73AB91DC3AD8D0020E7DB /* NSObject+UT.swift */,
+				BAF93AA61DCC1EE0006B147D /* Router.swift */,
 				BAB73ABB1DC3AD8D0020E7DB /* String+UT.swift */,
 			);
 			path = Base;
@@ -224,7 +227,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0720;
-				LastUpgradeCheck = 0800;
+				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
 					607FACE41AFB9204008FA782 = {
@@ -319,6 +322,7 @@
 				BAB73AEA1DC3AF7F0020E7DB /* UIApplication+UT.swift in Sources */,
 				BAB73ACC1DC3AD8D0020E7DB /* NSObject+UT.swift in Sources */,
 				BAB73AF31DC3AF7F0020E7DB /* UIView+UT.swift in Sources */,
+				BAF93AA71DCC1EE0006B147D /* Router.swift in Sources */,
 				BAB73ACE1DC3AD8D0020E7DB /* String+UT.swift in Sources */,
 				BAB73AF01DC3AF7F0020E7DB /* UINavigationBar+UT.swift in Sources */,
 				BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */,

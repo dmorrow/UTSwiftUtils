@@ -11,7 +11,6 @@
 		26911372F12A9C23B5236355319EA8DF /* Pods-UTSwiftUtils_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 42B41FA47A4FDA525F8038DA49B6B320 /* Pods-UTSwiftUtils_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2774B938FDE84976D66E7724F7D4334B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		5AFD63A07408BB4F866D980A9E61D2C6 /* UTSwiftUtils-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BDBA16D098B035867761A5B1DF3ABE5 /* UTSwiftUtils-dummy.m */; };
-		A6FB6B4BB88F8D29D3E02AEBB8685E88 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B834DF26A626ACC499BB61B6B2B5115 /* ReplaceMe.swift */; };
 		BB3538AE71E66627346D206B3C72AD01 /* Pods-UTSwiftUtils_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 489053AA6ACD994651ED407264F3A207 /* Pods-UTSwiftUtils_Tests-dummy.m */; };
 		ED495DAC4952E302AC9E1F7F26E00933 /* UTSwiftUtils-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7AFB691C1C66C602274BB6042D286C0 /* UTSwiftUtils-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		4A011253523C5BF7BE4CC11DE33C161F /* Pods-UTSwiftUtils_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-UTSwiftUtils_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		7B12781B4E7A24D46DE67385305205DF /* UTSwiftUtils.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = UTSwiftUtils.modulemap; sourceTree = "<group>"; };
 		87AB4B8822B0B2BE7E33C5BE9445E5EB /* Pods-UTSwiftUtils_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UTSwiftUtils_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		8B834DF26A626ACC499BB61B6B2B5115 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9C6E68A0C7E5BF1DEEC2388CF53CD15F /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		B747BD057DD5745504978AD047032DCF /* Pods-UTSwiftUtils_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-UTSwiftUtils_Tests-frameworks.sh"; sourceTree = "<group>"; };
@@ -175,7 +173,6 @@
 		F5AE3784190ACEB3D2FE890B20917CE5 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				8B834DF26A626ACC499BB61B6B2B5115 /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -277,7 +274,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A6FB6B4BB88F8D29D3E02AEBB8685E88 /* ReplaceMe.swift in Sources */,
 				5AFD63A07408BB4F866D980A9E61D2C6 /* UTSwiftUtils-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
