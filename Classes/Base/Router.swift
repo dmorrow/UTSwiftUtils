@@ -8,28 +8,28 @@
 import Foundation
 import UIKit
 
-typealias RoutableParams = Dictionary <AnyHashable, Any>
-typealias RoutableOpenCallback = (_ params: RoutableParams) -> Void
+public typealias RoutableParams = Dictionary <AnyHashable, Any>
+public typealias RoutableOpenCallback = (_ params: RoutableParams) -> Void
 
-protocol Routable {
+public protocol Routable {
     var controllerParams:RoutableParams? { get set }
     init(params:RoutableParams?)
 }
 
-extension Routable where Self: UIViewController {
-    init(params: RoutableParams?) {
+public extension Routable where Self: UIViewController {
+    public init(params: RoutableParams?) {
         self.init(nibName: nil, bundle: nil)
         self.controllerParams = params
     }
 }
 
-struct RouteParams {
+public struct RouteParams {
     var routeOptions : RouteOptions?
     var openParams : RoutableParams?
     var extraParams : RoutableParams?
     
     // TODO: CHECK THIS... MAYBE ALWAYS NEED DEFAULT PARAMS AVAILABLE?
-    var controllerParams : RoutableParams {
+    public var controllerParams : RoutableParams {
         get {
             var controllerParams = RoutableParams()
             if let defaults = self.routeOptions?.defaultParams {
@@ -45,7 +45,7 @@ struct RouteParams {
         }
     }
     
-    init(routerOptions: RouteOptions, openParams: RoutableParams?, extraParams: RoutableParams?) {
+    public init(routerOptions: RouteOptions, openParams: RoutableParams?, extraParams: RoutableParams?) {
         self.routeOptions = routerOptions
         self.openParams = openParams
         self.extraParams = extraParams
@@ -53,18 +53,18 @@ struct RouteParams {
 }
 
 
-enum RouteException : Error {
+public enum RouteException : Error {
     case initializerNotFound
     case routeNotFound
     case misformedRoute
 }
 
-struct RouteOptions {
+public struct RouteOptions {
     
-    var openClass: Routable?
-    var callback : RoutableOpenCallback?
+    public var openClass: Routable?
+    public var callback : RoutableOpenCallback?
     
-    init(presentationStyle: UIModalPresentationStyle = UIModalPresentationStyle.none, transitionStyle: UIModalTransitionStyle = UIModalTransitionStyle.coverVertical, defaultParams: RoutableParams? = nil, isRoot: Bool = false, isModal: Bool = false) {
+    public init(presentationStyle: UIModalPresentationStyle = UIModalPresentationStyle.none, transitionStyle: UIModalTransitionStyle = UIModalTransitionStyle.coverVertical, defaultParams: RoutableParams? = nil, isRoot: Bool = false, isModal: Bool = false) {
         self.presentationStyle = presentationStyle
         self.transitionStyle = transitionStyle
         self.defaultParams = defaultParams
@@ -75,30 +75,30 @@ struct RouteOptions {
     /**
     The property determining if the mapped `UIViewController` should be opened modally or pushed in the navigation stack.
     */
-    var isModal : Bool = false
+    public var isModal : Bool = false
     
     /**
     The property determining the `UIModalPresentationStyle` assigned to the mapped `UIViewController` instance. This is always assigned, regardless of whether or not `modal` is true.
     */
-    var presentationStyle : UIModalPresentationStyle = UIModalPresentationStyle.none
+    public var presentationStyle : UIModalPresentationStyle = UIModalPresentationStyle.none
     
     /**
     The property determining the `UIModalTransitionStyle` assigned to the mapped `UIViewController` instance. This is always assigned, regardless of whether or not `modal` is true.
     */
-    var transitionStyle : UIModalTransitionStyle = UIModalTransitionStyle.coverVertical
+    public var transitionStyle : UIModalTransitionStyle = UIModalTransitionStyle.coverVertical
     /**
     Default parameters sent to the `UIViewController`'s initWithRouteParams: method. This is useful if you want to pass some non-`NSString` information. These parameters will be overwritten by any parameters passed in the URL in open:.
     */
-    var defaultParams : RoutableParams?
+    public var defaultParams : RoutableParams?
     
     /**
     The property determining if the mapped `UIViewController` instance should be set as the root view controller of the router's `UINavigationController` instance.
     */
-    var shouldOpenAsRootViewController : Bool = false
+    public var shouldOpenAsRootViewController : Bool = false
     
 }
 
-class Router {
+open class Router {
     
     static let shared = Router()
     
@@ -109,9 +109,9 @@ class Router {
     // i.e. "users/16"
     private (set) var cachedRoutes = [String : RouteParams]()
     
-    static let ROUTE_NOT_FOUND_FORMAT : String = "No route found for URL %@"
+    open static let ROUTE_NOT_FOUND_FORMAT : String = "No route found for URL %@"
     
-    static let INVALID_CONTROLLER_FORMAT : String = "Your controller class %@ needs to implement either the static method %@ or the instance method %@"
+    open static let INVALID_CONTROLLER_FORMAT : String = "Your controller class %@ needs to implement either the static method %@ or the instance method %@"
     
     ///-------------------------------
     /// @name Navigation Controller
@@ -120,13 +120,13 @@ class Router {
     /**
     The `UINavigationController` instance which mapped `UIViewController`s will be pushed onto.
     */
-    var navigationController : UINavigationController?
+    open var navigationController : UINavigationController?
 
     
     /**
     Pop to the last `UIViewController` mapped with the router; this will either dismiss the presented `UIViewController` (i.e. modal) or pop the top view controller in the navigationController. The transition is animated.
     */
-    func pop() {
+    open func pop() {
         self.popViewControllerFromRouterAnimated(animated: true)
     }
     
@@ -134,7 +134,7 @@ class Router {
     Pop to the last `UIViewController` mapped with the router; this will either dismiss the presented `UIViewController` (i.e. modal) or pop the top view  controller in the navigationController.
     @param animated Whether or not the transition is animated;
     */
-    func popViewControllerFromRouterAnimated(animated: Bool) {
+    open func popViewControllerFromRouterAnimated(animated: Bool) {
         if let navController = self.navigationController {
             if navController.presentedViewController != nil {
                 navController.dismiss(animated: animated)
@@ -149,7 +149,7 @@ class Router {
     @param animated Whether or not the transition is animated;
     @remarks not idiomatic objective-c naming
     */
-    func pop(animated: Bool) {
+    open func pop(animated: Bool) {
         self.popViewControllerFromRouterAnimated(animated: animated)
     }
     
@@ -164,7 +164,7 @@ class Router {
     @param callback The callback to run when the URL is triggered in `open:`
     @param options Configuration for the route
     */
-    func map(format: String, options: RouteOptions? = nil, callback: @escaping RoutableOpenCallback) {
+    open func map(format: String, options: RouteOptions? = nil, callback: @escaping RoutableOpenCallback) {
         var options: RouteOptions = options ?? RouteOptions()
         options.callback = callback
         self.routes[format] = options
@@ -176,7 +176,7 @@ class Router {
     @param controllerClass The `UIViewController` `Class` which will be instanstiated when the URL is triggered in `open:`
     @param options Configuration for the route, such as modal settings
     */
-    func map(format: String, controllerClass: Routable, options: RouteOptions? = nil) {
+    open func map(format: String, controllerClass: Routable, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
         options.openClass = controllerClass
         self.routes[format] = options
@@ -190,7 +190,7 @@ class Router {
     A convenience method for opening a URL using `UIApplication` `openURL:`.
     @param url The URL the OS will open (i.e. "http://google.com")
     */
-    func open(external url : String) {
+    open func open(external url : String) {
         UIApplication.shared.openURL(URL(string: url)!)
     }
     
@@ -203,7 +203,7 @@ class Router {
     @exception NavigationControllerNotProvided Thrown if url opens a `UIViewController` and navigationController has not been assigned
     @exception initializerNotFound Thrown if the mapped `UIViewController` instance does not implement -initWithRouteParams: or +allocWithRouteParams:
     */
-    func open(url: String, animated: Bool = true, extraParams: RoutableParams? = nil) {
+    open func open(url: String, animated: Bool = true, extraParams: RoutableParams? = nil) {
         
         guard let params = routeParams(for: url, extraParams: extraParams), let options = params.routeOptions else {
             return
@@ -248,7 +248,7 @@ class Router {
     @param url The URL being detected (i.e. "users/16")
     */
     
-    func routeParams(for url: String, extraParams: RoutableParams? = nil) -> RouteParams? {
+    open func routeParams(for url: String, extraParams: RoutableParams? = nil) -> RouteParams? {
     
         if let cachedRoute = self.cachedRoutes[url], extraParams == nil { //TODO: should we just tack on the extra params and return if cached at all?
             return cachedRoute
@@ -273,7 +273,7 @@ class Router {
         return nil
     }
     
-    func params(for urlComponents: [String], routeUrlComponents: [String]) -> RoutableParams? {
+    open func params(for urlComponents: [String], routeUrlComponents: [String]) -> RoutableParams? {
         var params = RoutableParams()
         for (idx, routeComponent) in routeUrlComponents.enumerated() {
             let givenComponent = urlComponents[idx]
@@ -288,14 +288,14 @@ class Router {
         return params
     }
     
-    func createViewController(with openClass: Routable, params: RoutableParams?) -> UIViewController? {
+    open func createViewController(with openClass: Routable, params: RoutableParams?) -> UIViewController? {
         guard let viewController = UIApplication.deviceSpecificClass(baseClass: openClass) as? Routable.Type else {
             return nil
         }
         return viewController.init(params:params) as? UIViewController
     }
     
-    func controller(for params: RouteParams) -> UIViewController? {
+    open func controller(for params: RouteParams) -> UIViewController? {
         guard let routeOptions = params.routeOptions, let openClass = routeOptions.openClass, let controller = createViewController(with: openClass, params: params.controllerParams) else {
             return nil
         }
