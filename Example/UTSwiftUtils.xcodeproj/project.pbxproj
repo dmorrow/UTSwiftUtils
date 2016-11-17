@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F259053F9E3B59A3B2BDEEA /* Pods_UTSwiftUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF5F913872131A21E6AA672 /* Pods_UTSwiftUtils_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BA3A91DC1DDE1E2000061492 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */; };
 		BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */; };
 		BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */; };
 		BAB73AC81DC3AD8D0020E7DB /* CoreGraphics+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */; };
@@ -41,6 +42,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9F1EC58FC294F7E222D36FF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A9DE93C5DED9986FF7E2E4DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+UT.swift"; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 		BAB73ADD1DC3AF7F0020E7DB /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */,
 				BAB73ADE1DC3AF7F0020E7DB /* Reusable.swift */,
 				BAB73ADF1DC3AF7F0020E7DB /* UIApplication+UT.swift */,
 				BAB73AE01DC3AF7F0020E7DB /* UICollectionView+UT.swift */,
@@ -333,6 +336,7 @@
 				BAB73AEF1DC3AF7F0020E7DB /* UIImage+UT.swift in Sources */,
 				BAB73AEC1DC3AF7F0020E7DB /* UICollectionViewLayout+UT.swift in Sources */,
 				BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */,
+				BA3A91DC1DDE1E2000061492 /* KeyboardHandler.swift in Sources */,
 				BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */,
 				BAB73AEB1DC3AF7F0020E7DB /* UICollectionView+UT.swift in Sources */,
 				BAB73AC91DC3AD8D0020E7DB /* Date+UT.swift in Sources */,
