@@ -15,28 +15,28 @@ public protocol KeyboardHandler {
     var scrollableView:UIScrollView? { get }
     var isObservingKeyboard:Bool { get set }
     
-    func internalKeyboardWillShow(_ notification: Notification)
-    func internalKeyboardDidShow(_ notification: Notification)
-    func internalKeyboardWillHide(_ notification: Notification)
-    func internalKeyboardDidHide(_ notification: Notification)
-    func internalKeyboardResize(_ notification: Notification)
+    func keyboardWillShow(_ notification: Notification)
+    func keyboardDidShow(_ notification: Notification)
+    func keyboardWillHide(_ notification: Notification)
+    func keyboardDidHide(_ notification: Notification)
+    func keyboardResize(_ notification: Notification)
 }
 
 public extension KeyboardHandler where Self: UIViewController  {
         
-    public func observeKeyboardNotifications() {
+    public func addKeyboardObservers() {
         if let _ = scrollableView, !isObservingKeyboard {
             isObservingKeyboard = true
             let notificationCenter = NotificationCenter.default
-            notificationCenter.addObserver(self, selector:#selector(internalKeyboardResize(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(internalKeyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(internalKeyboardDidShow(_:)), name:NSNotification.Name.UIKeyboardDidShow, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(internalKeyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(internalKeyboardDidHide(_:)), name:NSNotification.Name.UIKeyboardDidHide, object: nil)
+            notificationCenter.addObserver(self, selector:#selector(keyboardResize(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name:NSNotification.Name.UIKeyboardWillShow, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name:NSNotification.Name.UIKeyboardDidShow, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name:NSNotification.Name.UIKeyboardWillHide, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardDidHide(_:)), name:NSNotification.Name.UIKeyboardDidHide, object: nil)
         }
     }
     
-    public func removeObserveKeyboardNotifications() {
+    public func removeKeyboardObservers() {
         if isObservingKeyboard {
             let notificationCenter = NotificationCenter.default
             notificationCenter.removeObserver(self, name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
