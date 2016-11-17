@@ -14,6 +14,7 @@ public protocol KeyboardHandler {
     
     var scrollableView:UIScrollView? { get }
     var isObservingKeyboard:Bool { get set }
+    var observesKeyboard:Bool { get }
     
     func keyboardWillShow(_ notification: Notification)
     func keyboardDidShow(_ notification: Notification)
@@ -25,7 +26,8 @@ public protocol KeyboardHandler {
 public extension KeyboardHandler where Self: UIViewController  {
         
     public func addKeyboardObservers() {
-        if let _ = scrollableView, !isObservingKeyboard {
+        guard scrollableView != nil, observesKeyboard else { return }
+        if !isObservingKeyboard {
             isObservingKeyboard = true
             let notificationCenter = NotificationCenter.default
             notificationCenter.addObserver(self, selector:#selector(keyboardResize(_:)), name: NSNotification.Name.UIKeyboardWillChangeFrame, object: nil)
