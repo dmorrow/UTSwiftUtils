@@ -45,6 +45,15 @@ extension String {
         return characters.count > 0 && characters.count == unicodeScalars.map { $0 }.filter { $0.isEmoji }.count
     }
 
+    public var isValidEmail: Bool {
+        do {
+        let regex = try NSRegularExpression(pattern: "^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$", options: .caseInsensitive)
+            return regex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.anchored, range:  NSMakeRange(0, self.characters.count)) != nil
+        } catch {
+            print(error)
+        }
+        return false
+    }
     
     @available(iOS 9, *)
     public func createLink(_ link: String, fontSize: CGFloat, linkColor:UIColor = UIColor.defaultBlue) -> NSMutableAttributedString {
