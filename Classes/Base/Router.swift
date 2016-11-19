@@ -24,9 +24,9 @@ public extension Routable where Self: UIViewController {
 }
 
 public struct RouteParams {
-    var routeOptions : RouteOptions?
-    var openParams : RoutableParams?
-    var extraParams : RoutableParams?
+    public let routeOptions : RouteOptions?
+    public let openParams : RoutableParams?
+    public let extraParams : RoutableParams?
     
     // TODO: CHECK THIS... MAYBE ALWAYS NEED DEFAULT PARAMS AVAILABLE?
     public var controllerParams : RoutableParams {
@@ -45,7 +45,7 @@ public struct RouteParams {
         }
     }
     
-    public init(routerOptions: RouteOptions, openParams: RoutableParams?, extraParams: RoutableParams?) {
+    public init(routerOptions: RouteOptions, openParams: RoutableParams? = nil, extraParams: RoutableParams? = nil) {
         self.routeOptions = routerOptions
         self.openParams = openParams
         self.extraParams = extraParams
@@ -75,32 +75,32 @@ public struct RouteOptions {
     /**
     The property determining if the mapped `UIViewController` should be opened modally or pushed in the navigation stack.
     */
-    public var isModal : Bool = false
+    public let isModal : Bool
     
     /**
     The property determining the `UIModalPresentationStyle` assigned to the mapped `UIViewController` instance. This is always assigned, regardless of whether or not `modal` is true.
     */
-    public var presentationStyle : UIModalPresentationStyle = UIModalPresentationStyle.none
+    public let presentationStyle : UIModalPresentationStyle
     
     /**
     The property determining the `UIModalTransitionStyle` assigned to the mapped `UIViewController` instance. This is always assigned, regardless of whether or not `modal` is true.
     */
-    public var transitionStyle : UIModalTransitionStyle = UIModalTransitionStyle.coverVertical
+    public let transitionStyle : UIModalTransitionStyle
     /**
     Default parameters sent to the `UIViewController`'s initWithRouteParams: method. This is useful if you want to pass some non-`NSString` information. These parameters will be overwritten by any parameters passed in the URL in open:.
     */
-    public var defaultParams : RoutableParams?
+    public let defaultParams : RoutableParams?
     
     /**
     The property determining if the mapped `UIViewController` instance should be set as the root view controller of the router's `UINavigationController` instance.
     */
-    public var shouldOpenAsRootViewController : Bool = false
+    public let shouldOpenAsRootViewController : Bool
     
 }
 
 open class Router {
     
-    static let shared = Router()
+    open static let shared = Router()
     
     // Map of URL format NSString -> RouteOptions
     // i.e. "users/:id"
@@ -176,7 +176,7 @@ open class Router {
     @param controllerClass The `UIViewController` `Class` which will be instanstiated when the URL is triggered in `open:`
     @param options Configuration for the route, such as modal settings
     */
-    open func map(format: String, controllerClass: Routable, options: RouteOptions? = nil) {
+    open func map<T:Routable>(format: String, controllerClass: T, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
         options.openClass = controllerClass
         self.routes[format] = options
