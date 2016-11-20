@@ -52,12 +52,12 @@ public struct RouteParams {
     }
 }
 
-
-public enum RouteException : Error {
-    case initializerNotFound
-    case routeNotFound
-    case misformedRoute
-}
+//TODO - Unused
+//public enum RouteException : Error {
+//    case initializerNotFound
+//    case routeNotFound
+//    case misformedRoute
+//}
 
 public struct RouteOptions {
     
