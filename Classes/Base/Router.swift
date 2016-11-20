@@ -140,7 +140,7 @@ open class Router {
             if navController.presentedViewController != nil {
                 navController.dismiss(animated: animated)
             } else {
-                let _ = self.navigationController?.popViewController(animated: animated)
+                navController.popViewController(animated: animated)
             }
         }
     }
