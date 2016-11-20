@@ -125,13 +125,6 @@ open class Router {
 
     
     /**
-    Pop to the last `UIViewController` mapped with the router; this will either dismiss the presented `UIViewController` (i.e. modal) or pop the top view controller in the navigationController. The transition is animated.
-    */
-    open func pop() {
-        self.popViewControllerFromRouterAnimated(animated: true)
-    }
-    
-    /**
     Pop to the last `UIViewController` mapped with the router; this will either dismiss the presented `UIViewController` (i.e. modal) or pop the top view  controller in the navigationController.
     @param animated Whether or not the transition is animated;
     */
@@ -150,7 +143,7 @@ open class Router {
     @param animated Whether or not the transition is animated;
     @remarks not idiomatic objective-c naming
     */
-    open func pop(animated: Bool) {
+    open func pop(animated: Bool = true) {
         self.popViewControllerFromRouterAnimated(animated: animated)
     }
     
