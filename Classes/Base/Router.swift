@@ -109,9 +109,10 @@ open class Router {
     // i.e. "users/16"
     private (set) var cachedRoutes = [String : RouteParams]()
     
-    open static let ROUTE_NOT_FOUND_FORMAT : String = "No route found for URL %@"
+    //TODO: Better errors
+//    open static let ROUTE_NOT_FOUND_FORMAT : String = "No route found for URL %@"
     
-    open static let INVALID_CONTROLLER_FORMAT : String = "Your controller class %@ needs to implement either the static method %@ or the instance method %@"
+//    open static let INVALID_CONTROLLER_FORMAT : String = "Your controller class %@ needs to implement either the static method %@ or the instance method %@"
     
     ///-------------------------------
     /// @name Navigation Controller
