@@ -61,7 +61,7 @@ public enum RouteException : Error {
 
 public struct RouteOptions {
     
-    public var openClass: Routable?
+    public var openClass: Routable.Type?
     public var callback : RoutableOpenCallback?
     
     public init(presentationStyle: UIModalPresentationStyle = UIModalPresentationStyle.none, transitionStyle: UIModalTransitionStyle = UIModalTransitionStyle.coverVertical, defaultParams: RoutableParams? = nil, isRoot: Bool = false, isModal: Bool = false) {
@@ -165,7 +165,7 @@ open class Router {
     @param callback The callback to run when the URL is triggered in `open:`
     @param options Configuration for the route
     */
-    open func map(format: String, options: RouteOptions? = nil, callback: @escaping RoutableOpenCallback) {
+    open func map(format: String, callback: @escaping RoutableOpenCallback, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
         options.callback = callback
         self.routes[format] = options
@@ -177,7 +177,7 @@ open class Router {
     @param controllerClass The `UIViewController` `Class` which will be instanstiated when the URL is triggered in `open:`
     @param options Configuration for the route, such as modal settings
     */
-    open func map<T:Routable>(format: String, controllerClass: T, options: RouteOptions? = nil) {
+    open func map(format: String, controllerClass: Routable.Type, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
         options.openClass = controllerClass
         self.routes[format] = options
@@ -289,10 +289,8 @@ open class Router {
         return params
     }
     
-    open func createViewController(with openClass: Routable, params: RoutableParams?) -> UIViewController? {
-        guard let viewController = UIApplication.deviceSpecificClass(baseClass: openClass) as? Routable.Type else {
-            return nil
-        }
+    open func createViewController(with openClass: Routable.Type, params: RoutableParams?) -> UIViewController? {
+        let viewController = UIApplication.deviceSpecificClass(baseClass: openClass)
         return viewController.init(params:params) as? UIViewController
     }
     
