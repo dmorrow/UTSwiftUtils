@@ -10,6 +10,7 @@ import UIKit
 
 public typealias RoutableParams = Dictionary <AnyHashable, Any>
 public typealias RoutableOpenCallback = (_ params: RoutableParams) -> Void
+public typealias RoutableCreateCallback = (_ params: RoutableParams) -> UIViewController?
 
 public protocol Routable {
     var controllerParams:RoutableParams? { get set }
@@ -62,7 +63,8 @@ public struct RouteParams {
 public struct RouteOptions {
     
     public var openClass: Routable.Type?
-    public var callback : RoutableOpenCallback?
+    public var createCallback: RoutableCreateCallback?
+    public var openCallback: RoutableOpenCallback?
     
     public init(presentationStyle: UIModalPresentationStyle = UIModalPresentationStyle.none, transitionStyle: UIModalTransitionStyle = UIModalTransitionStyle.coverVertical, defaultParams: RoutableParams? = nil, isRoot: Bool = false, isModal: Bool = false) {
         self.presentationStyle = presentationStyle
@@ -155,12 +157,24 @@ open class Router {
     /**
     Map a URL format to an anonymous callback and `RouteOptions` options
     @param format A URL format (i.e. "users/:id" or "logout")
-    @param callback The callback to run when the URL is triggered in `open:`
+    @param callback The RoutableOpenCallback to run when the URL is triggered in `open:`
     @param options Configuration for the route
     */
-    open func map(format: String, callback: @escaping RoutableOpenCallback, options: RouteOptions? = nil) {
+    open func map(format: String, open callback: @escaping RoutableOpenCallback, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
-        options.callback = callback
+        options.openCallback = callback
+        self.routes[format] = options
+    }
+    
+    /**
+     Map a URL format to an callback to return a UIViewController and `RouteOptions` options
+     @param format A URL format (i.e. "users/:id" or "logout")
+     @param callback The RoutableCreateCallback to run when the URL is triggered in `open:`
+     @param options Configuration for the route
+     */
+    open func map(format: String, create callback: @escaping RoutableCreateCallback, options: RouteOptions? = nil) {
+        var options: RouteOptions = options ?? RouteOptions()
+        options.createCallback = callback
         self.routes[format] = options
     }
     
@@ -203,8 +217,8 @@ open class Router {
             return
         }
         
-        if let callback = options.callback {
-            callback(params.controllerParams)
+        if let openCallback = options.openCallback {
+            openCallback(params.controllerParams)
             return
         }
         
@@ -212,8 +226,15 @@ open class Router {
             fatalError("Router#navigationController has not been set to a UINavigationController instance")
         }
         
-
-        guard let controller = controller(for: params) else {
+        var maybeController:UIViewController?
+        
+        if let createCallback = options.createCallback {
+            maybeController = createCallback(params.controllerParams)
+        } else if let safeController = viewController(for: params) {
+            maybeController = safeController
+        }
+        
+        guard let controller = maybeController else {
             return
         }
         
@@ -287,7 +308,7 @@ open class Router {
         return viewController.init(params:params) as? UIViewController
     }
     
-    open func controller(for params: RouteParams) -> UIViewController? {
+    open func viewController(for params: RouteParams) -> UIViewController? {
         guard let routeOptions = params.routeOptions, let openClass = routeOptions.openClass, let controller = createViewController(with: openClass, params: params.controllerParams) else {
             return nil
         }
