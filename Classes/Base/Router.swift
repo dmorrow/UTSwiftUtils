@@ -272,7 +272,7 @@ open class Router {
         if let nsurl = NSURL(string: url), let pathComponents = nsurl.pathComponents {
             var openParams : RouteParams?
             for (routeUrl, routeOptions) in self.routes {
-                if let nsurl = NSURL(string: routeUrl), let routeParts = nsurl.pathComponents, let givenParams = self.params(for: pathComponents, routeUrlComponents: routeParts),  routeParts.count == pathComponents.count{
+                if let nsurl = NSURL(string: routeUrl), let routeParts = nsurl.pathComponents, let givenParams = self.params(for: pathComponents, routeUrlComponents: routeParts) {
                     openParams = RouteParams(routerOptions: routeOptions, openParams: givenParams, extraParams: extraParams)
                     break
                 }
@@ -289,6 +289,7 @@ open class Router {
     }
     
     open func params(for urlComponents: [String], routeUrlComponents: [String]) -> RoutableParams? {
+        guard urlComponents.count == routeUrlComponents.count else { return nil }
         var params = RoutableParams()
         for (idx, routeComponent) in routeUrlComponents.enumerated() {
             let givenComponent = urlComponents[idx]
