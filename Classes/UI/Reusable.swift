@@ -29,3 +29,6 @@ extension NibLoadableView where Self: UIView {
         return topLevelObjects?.first! as! T
     }
 }
+
+extension UICollectionViewCell: Reusable { }
+extension UITableViewCell: Reusable { } 
