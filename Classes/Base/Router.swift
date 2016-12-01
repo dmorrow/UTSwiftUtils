@@ -12,17 +12,17 @@ public typealias RoutableParams = Dictionary <AnyHashable, Any>
 public typealias RoutableOpenCallback = (_ params: RoutableParams) -> Void
 public typealias RoutableCreateCallback = (_ params: RoutableParams) -> UIViewController?
 
-public protocol Routable {
-    var controllerParams:RoutableParams? { get set }
-    init(params:RoutableParams?)
-}
-
-public extension Routable where Self: UIViewController {
-    public init(params: RoutableParams?) {
-        self.init(nibName: nil, bundle: nil)
-        self.controllerParams = params
-    }
-}
+//public protocol Routable {
+//    var controllerParams:RoutableParams? { get set }
+//    init(params:RoutableParams?)
+//}
+//
+//public extension Routable where Self: UIViewController {
+//    public init(params: RoutableParams?) {
+//        self.init(nibName: nil, bundle: nil)
+//        self.controllerParams = params
+//    }
+//}
 
 public struct RouteParams {
     public let routeOptions : RouteOptions?
@@ -62,7 +62,7 @@ public struct RouteParams {
 
 public struct RouteOptions {
     
-    public var openClass: Routable.Type?
+    public var openClass: UIViewController.Type?
     public var createCallback: RoutableCreateCallback?
     public var openCallback: RoutableOpenCallback?
     
@@ -184,7 +184,7 @@ open class Router {
     @param controllerClass The `UIViewController` `Class` which will be instanstiated when the URL is triggered in `open:`
     @param options Configuration for the route, such as modal settings
     */
-    open func map(format: String, controllerClass: Routable.Type, options: RouteOptions? = nil) {
+    open func map(format: String, controllerClass: UIViewController.Type, options: RouteOptions? = nil) {
         var options: RouteOptions = options ?? RouteOptions()
         options.openClass = controllerClass
         self.routes[format] = options
@@ -304,9 +304,9 @@ open class Router {
         return params
     }
     
-    open func createViewController(with openClass: Routable.Type, params: RoutableParams?) -> UIViewController? {
+    open func createViewController(with openClass: UIViewController.Type, params: RoutableParams?) -> UIViewController? {
         let viewController = UIApplication.deviceSpecificClass(baseClass: openClass)
-        return viewController.init(params:params) as? UIViewController
+        return viewController.init()
     }
     
     open func viewController(for params: RouteParams) -> UIViewController? {
