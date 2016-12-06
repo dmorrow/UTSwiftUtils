@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		3F259053F9E3B59A3B2BDEEA /* Pods_UTSwiftUtils_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1AF5F913872131A21E6AA672 /* Pods_UTSwiftUtils_Tests.framework */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		BA003A111DF761FC0049D657 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA003A101DF761FC0049D657 /* PlaceholderTextView.swift */; };
 		BA3A91DC1DDE1E2000061492 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */; };
 		BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */; };
 		BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */; };
@@ -32,6 +33,7 @@
 		BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */; };
 		BAB73AF31DC3AF7F0020E7DB /* UIView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */; };
 		BAF93AA71DCC1EE0006B147D /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF93AA61DCC1EE0006B147D /* Router.swift */; };
+		BAFEE5B01DF76EB40081AFE7 /* UITextView+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAFEE5AF1DF76EB40081AFE7 /* UITextView+UT.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,7 @@
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		9F1EC58FC294F7E222D36FF2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		A9DE93C5DED9986FF7E2E4DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		BA003A101DF761FC0049D657 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
 		BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITableView+UT.swift"; sourceTree = "<group>"; };
 		BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+UT.swift"; sourceTree = "<group>"; };
 		BAF93AA61DCC1EE0006B147D /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BAFEE5AF1DF76EB40081AFE7 /* UITextView+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UITextView+UT.swift"; sourceTree = "<group>"; };
 		D92735BCFD92C7C6CDFC0B3D /* UTSwiftUtils.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = UTSwiftUtils.podspec; path = ../UTSwiftUtils.podspec; sourceTree = "<group>"; };
 		E84ACEB91D4039C20891E78D /* Pods-UTSwiftUtils_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UTSwiftUtils_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UTSwiftUtils_Tests/Pods-UTSwiftUtils_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -176,6 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */,
+				BA003A101DF761FC0049D657 /* PlaceholderTextView.swift */,
 				BAB73ADE1DC3AF7F0020E7DB /* Reusable.swift */,
 				BAB73ADF1DC3AF7F0020E7DB /* UIApplication+UT.swift */,
 				BAB73AE01DC3AF7F0020E7DB /* UICollectionView+UT.swift */,
@@ -186,6 +191,7 @@
 				BAB73AE51DC3AF7F0020E7DB /* UINavigationBar+UT.swift */,
 				BAB73AE61DC3AF7F0020E7DB /* UIScrollView+UT.swift */,
 				BAB73AE71DC3AF7F0020E7DB /* UITableView+UT.swift */,
+				BAFEE5AF1DF76EB40081AFE7 /* UITextView+UT.swift */,
 				BAB73AE81DC3AF7F0020E7DB /* UIView+UT.swift */,
 			);
 			path = UI;
@@ -330,6 +336,7 @@
 				BAB73AF01DC3AF7F0020E7DB /* UINavigationBar+UT.swift in Sources */,
 				BAB73AF21DC3AF7F0020E7DB /* UITableView+UT.swift in Sources */,
 				BAB73ACA1DC3AD8D0020E7DB /* Dictionary+UT.swift in Sources */,
+				BA003A111DF761FC0049D657 /* PlaceholderTextView.swift in Sources */,
 				BAB73AC81DC3AD8D0020E7DB /* CoreGraphics+UT.swift in Sources */,
 				BAB73AEE1DC3AF7F0020E7DB /* UIDevice+UT.swift in Sources */,
 				BAB73ADB1DC3AD970020E7DB /* NSManagedObject+UT.swift in Sources */,
@@ -342,6 +349,7 @@
 				BAB73AC91DC3AD8D0020E7DB /* Date+UT.swift in Sources */,
 				BAB73AED1DC3AF7F0020E7DB /* UIColor+UT.swift in Sources */,
 				BAB73AF11DC3AF7F0020E7DB /* UIScrollView+UT.swift in Sources */,
+				BAFEE5B01DF76EB40081AFE7 /* UITextView+UT.swift in Sources */,
 				BAB73ADC1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift in Sources */,
 				BAB73ACB1DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
