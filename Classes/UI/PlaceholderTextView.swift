@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 @available(iOS 9, *)
-class PlaceholderTextView: UITextView {
+open class PlaceholderTextView: UITextView {
     
     open let placeholderLabel: UILabel = UILabel()
     
