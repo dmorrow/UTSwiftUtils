@@ -26,6 +26,12 @@ open class PlaceholderTextView: UITextView {
         }
     }
     
+    override open var textContainerInset: UIEdgeInsets {
+        didSet {
+            updateLabelConstraints()
+        }
+    }
+    
     private var placeholderLeadingConstraint: NSLayoutConstraint = NSLayoutConstraint()
     private var placeholderTrailingConstraint: NSLayoutConstraint = NSLayoutConstraint()
     private var placeholderTopConstraint: NSLayoutConstraint = NSLayoutConstraint()
