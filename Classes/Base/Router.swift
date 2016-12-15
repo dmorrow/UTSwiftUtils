@@ -198,8 +198,14 @@ open class Router {
     A convenience method for opening a URL using `UIApplication` `openURL:`.
     @param url The URL the OS will open (i.e. "http://google.com")
     */
-    open func open(external url : String) {
-        UIApplication.shared.openURL(URL(string: url)!)
+    open func open(external urlString : String) {
+        if let url = URL(string: urlString) {
+            if #available(iOS 10.0, *) {
+                UIApplication.shared.open(url)
+            } else {
+                UIApplication.shared.openURL(url)
+            }
+        }
     }
     
     /**
