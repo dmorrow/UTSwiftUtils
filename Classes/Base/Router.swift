@@ -209,6 +209,37 @@ open class Router {
     }
     
     /**
+     Present a viewcontroller and conditionally wrap it in a UINavigationController instance as needed
+     **/
+    
+    open func present(_ controller:UIViewController, animated:Bool = true, modalNavController:UINavigationController? = nil) {
+        guard let navController = navigationController else {
+            fatalError("Router#navigationController has not been set to a UINavigationController instance")
+        }
+        
+        if navController.presentedViewController != nil {
+            navController.dismiss(animated: true)
+        }
+        
+        if controller is UINavigationController {
+            navController.present(controller, animated: animated)
+        } else {
+            var wrapperController: UINavigationController
+            if let navController = modalNavController {
+                wrapperController = navController
+                wrapperController.viewControllers = [controller]
+            } else
+            {
+                wrapperController = UINavigationController(rootViewController: controller)
+            }
+            wrapperController.modalPresentationStyle = controller.modalPresentationStyle
+            wrapperController.modalTransitionStyle = controller.modalTransitionStyle
+            navController.present(wrapperController, animated: animated)
+        }
+    }
+    
+    
+    /**
     Triggers the appropriate functionality for a mapped URL, such as an anonymous function or opening a `UIViewController`
     @param url The URL being opened (i.e. "users/16")
     @param animated Whether or not `UIViewController` transitions are animated.
@@ -249,14 +280,7 @@ open class Router {
         }
         
         if options.isModal {
-            if controller is UINavigationController {
-                navController.present(controller, animated: animated)
-            } else {
-                let wrapperController = UINavigationController(rootViewController: controller)
-                wrapperController.modalPresentationStyle = controller.modalPresentationStyle
-                wrapperController.modalTransitionStyle = controller.modalTransitionStyle
-                navController.present(wrapperController, animated: animated)
-            }
+            present(controller, animated: animated)
         } else if options.shouldOpenAsRootViewController {
             navController.setViewControllers([controller], animated: animated)
         } else {
