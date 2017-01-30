@@ -11,6 +11,7 @@
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		BA003A111DF761FC0049D657 /* PlaceholderTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA003A101DF761FC0049D657 /* PlaceholderTextView.swift */; };
 		BA3A91DC1DDE1E2000061492 /* KeyboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */; };
+		BA5BDDD51E316C980018A361 /* Data+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5BDDD41E316C980018A361 /* Data+UT.swift */; };
 		BAB73AC61DC3AD8D0020E7DB /* Array+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */; };
 		BAB73AC71DC3AD8D0020E7DB /* CLLocation+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */; };
 		BAB73AC81DC3AD8D0020E7DB /* CoreGraphics+UT.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */; };
@@ -46,6 +47,7 @@
 		A9DE93C5DED9986FF7E2E4DF /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		BA003A101DF761FC0049D657 /* PlaceholderTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderTextView.swift; sourceTree = "<group>"; };
 		BA3A91DB1DDE1E2000061492 /* KeyboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardHandler.swift; sourceTree = "<group>"; };
+		BA5BDDD41E316C980018A361 /* Data+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB31DC3AD8D0020E7DB /* Array+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB41DC3AD8D0020E7DB /* CLLocation+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CLLocation+UT.swift"; sourceTree = "<group>"; };
 		BAB73AB51DC3AD8D0020E7DB /* CoreGraphics+UT.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CoreGraphics+UT.swift"; sourceTree = "<group>"; };
@@ -163,6 +165,7 @@
 				BAB73AB91DC3AD8D0020E7DB /* NSObject+UT.swift */,
 				BAF93AA61DCC1EE0006B147D /* Router.swift */,
 				BAB73ABB1DC3AD8D0020E7DB /* String+UT.swift */,
+				BA5BDDD41E316C980018A361 /* Data+UT.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 				BAB73ADC1DC3AD970020E7DB /* NSManagedObjectContext+UT.swift in Sources */,
 				BAB73ACB1DC3AD8D0020E7DB /* NSMutableAttributedString+UT.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				BA5BDDD51E316C980018A361 /* Data+UT.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
