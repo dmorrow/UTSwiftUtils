@@ -294,22 +294,26 @@ open class Router {
     */
     
     open func routeParams(for url: String, extraParams: RoutableParams? = nil) -> RouteParams? {
-    
+        
         if let cachedRoute = self.cachedRoutes[url], extraParams == nil { //TODO: should we just tack on the extra params and return if cached at all?
             return cachedRoute
         }
         
         if let nsurl = NSURL(string: url), let pathComponents = nsurl.pathComponents {
             var openParams : RouteParams?
-            for (routeUrl, routeOptions) in self.routes {
-                if let nsurl = NSURL(string: routeUrl), let routeParts = nsurl.pathComponents, let givenParams = self.params(for: pathComponents, routeUrlComponents: routeParts) {
-                    openParams = RouteParams(routerOptions: routeOptions, openParams: givenParams, extraParams: extraParams)
-                    break
+            if let exactMatchOptions = self.routes[url] {
+                openParams = RouteParams(routerOptions: exactMatchOptions, openParams: nil, extraParams: extraParams)
+            } else {
+                for (routeUrl, routeOptions) in self.routes {
+                    if let nsurl = NSURL(string: routeUrl), let routeParts = nsurl.pathComponents, let givenParams = self.params(for: pathComponents, routeUrlComponents: routeParts) {
+                        openParams = RouteParams(routerOptions: routeOptions, openParams: givenParams, extraParams: extraParams)
+                        break
+                    }
                 }
             }
             
             guard let returnParams = openParams else {
-                    return nil
+                return nil
             }
             
             self.cachedRoutes[url] = returnParams
