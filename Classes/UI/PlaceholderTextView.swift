@@ -82,6 +82,12 @@ open class PlaceholderTextView: UITextView {
         updateLabelConstraints()
     }
     
+    open override var text: String! {
+        didSet {
+            textDidChange()
+        }
+    }
+    
     deinit {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: nil)
     }
