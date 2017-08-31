@@ -7,7 +7,7 @@
 import Foundation
 import UIKit
 
-extension String {
+public extension String {
     
     public static var lineSeparator:String {
         get {
@@ -90,7 +90,7 @@ extension String {
     
     //Substrings - http://stackoverflow.com/a/39742687/1189470
     
-    func substring(from: Int?, to: Int?) -> String {
+    public func substring(from: Int?, to: Int?) -> String {
         if let start = from {
             guard start < self.characters.count else {
                 return ""
@@ -126,15 +126,15 @@ extension String {
         return self[startIndex ..< endIndex]
     }
     
-    func substring(from: Int) -> String {
+    public func substring(from: Int) -> String {
         return self.substring(from: from, to: nil)
     }
     
-    func substring(to: Int) -> String {
+    public func substring(to: Int) -> String {
         return self.substring(from: nil, to: to)
     }
     
-    func substring(from: Int?, length: Int) -> String {
+    public func substring(from: Int?, length: Int) -> String {
         guard length > 0 else {
             return ""
         }
@@ -149,7 +149,7 @@ extension String {
         return self.substring(from: from, to: end)
     }
     
-    func substring(length: Int, to: Int?) -> String {
+    public func substring(length: Int, to: Int?) -> String {
         guard let end = to, end > 0, length > 0 else {
             return ""
         }
@@ -167,9 +167,9 @@ extension String {
 
 
 
-extension UnicodeScalar {
+public extension UnicodeScalar {
     
-    var isEmoji: Bool {
+    public var isEmoji: Bool {
         
         switch value {
         case 0x3030, 0x00AE, 0x00A9, // Special Characters
