@@ -163,6 +163,11 @@ public extension String {
         
         return self.substring(from: start, to: to)
     }
+        
+    public func redact(beginChars: Int = 1, endChars: Int = 1, replacement: String = "*") -> String {
+        guard self.characters.count > beginChars + endChars else { return self }
+        return self.substring(to: beginChars-1) + String(repeating: replacement, count: self.characters.count - beginChars - endChars ) + self.substring(from: self.characters.count - endChars)
+    }
 }
 
 
