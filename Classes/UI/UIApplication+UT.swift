@@ -114,6 +114,13 @@ extension UIApplication {
         }
         return 0
     }
+    
+    open class var buildVersion: String {
+        if let text = Bundle.main.infoDictionary?["CFBundleShortVersionString"]  as? String {
+            return text
+        }
+        return ""
+    }
 }
 
 public enum Env : String {
