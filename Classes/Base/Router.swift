@@ -212,7 +212,7 @@ open class Router {
      Present a viewcontroller and conditionally wrap it in a UINavigationController instance as needed
      **/
     
-    open func present(_ controller:UIViewController, animated:Bool = true, modalNavController:UINavigationController? = nil) {
+    open func present(_ controller:UIViewController, animated:Bool = true, modalNavController:UINavigationController? = nil, completionCallback: (() -> Void)? = nil) {
         guard let navController = navigationController else {
             fatalError("Router#navigationController has not been set to a UINavigationController instance")
         }
@@ -222,7 +222,7 @@ open class Router {
         }
         
         if controller is UINavigationController {
-            navController.present(controller, animated: animated)
+            navController.present(controller, animated: animated, completion: completionCallback)
         } else {
             var wrapperController: UINavigationController
             if let navController = modalNavController {
@@ -248,8 +248,7 @@ open class Router {
     @exception NavigationControllerNotProvided Thrown if url opens a `UIViewController` and navigationController has not been assigned
     @exception initializerNotFound Thrown if the mapped `UIViewController` instance does not implement -initWithRouteParams: or +allocWithRouteParams:
     */
-    open func open(url: String, animated: Bool = true, extraParams: RoutableParams? = nil) {
-        
+    open func open(url: String, animated: Bool = true, extraParams: RoutableParams? = nil, completionCallback: (() -> Void)? = nil) {
         guard let params = routeParams(for: url, extraParams: extraParams), let options = params.routeOptions else {
             return
         }
@@ -280,7 +279,7 @@ open class Router {
         }
         
         if options.isModal {
-            present(controller, animated: animated)
+            present(controller, animated: animated, modalNavController: nil, completionCallback: completionCallback)
         } else if options.shouldOpenAsRootViewController {
             navController.setViewControllers([controller], animated: animated)
         } else {
