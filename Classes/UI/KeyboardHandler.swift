@@ -32,26 +32,26 @@ public extension KeyboardHandler where Self: UIViewController  {
         if !isObservingKeyboard {
             isObservingKeyboard = true
             let notificationCenter = NotificationCenter.default
-            notificationCenter.addObserver(self, selector:#selector(keyboardResize(_:)), name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: Notification.Name.UIKeyboardWillShow, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: Notification.Name.UIKeyboardDidShow, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: Notification.Name.UIKeyboardWillHide, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: Notification.Name.UIKeyboardDidHide, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(textfieldDidBeginEditing(_:)), name: Notification.Name.UITextFieldTextDidBeginEditing, object: nil)
-            notificationCenter.addObserver(self, selector: #selector(textviewDidBeginEditing(_:)), name: Notification.Name.UITextViewTextDidBeginEditing, object: nil)
+            notificationCenter.addObserver(self, selector:#selector(keyboardResize(_:)), name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardDidShow(_:)), name: UIResponder.keyboardDidShowNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(keyboardDidHide(_:)), name: UIResponder.keyboardDidHideNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(textfieldDidBeginEditing(_:)), name: UITextField.textDidBeginEditingNotification, object: nil)
+            notificationCenter.addObserver(self, selector: #selector(textviewDidBeginEditing(_:)), name: UITextView.textDidBeginEditingNotification, object: nil)
         }
     }
     
     public func removeKeyboardObservers() {
         if isObservingKeyboard {
             let notificationCenter = NotificationCenter.default
-            notificationCenter.removeObserver(self, name: Notification.Name.UIKeyboardWillChangeFrame, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UIKeyboardWillShow, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UIKeyboardDidShow, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UIKeyboardWillHide, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UIKeyboardDidHide, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UITextFieldTextDidBeginEditing, object: nil)
-            notificationCenter.removeObserver(self, name: Notification.Name.UITextViewTextDidBeginEditing, object: nil)
+            notificationCenter.removeObserver(self, name: UIResponder.keyboardWillChangeFrameNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIResponder.keyboardDidShowNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UIResponder.keyboardDidHideNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UITextField.textDidBeginEditingNotification, object: nil)
+            notificationCenter.removeObserver(self, name: UITextView.textDidBeginEditingNotification, object: nil)
             isObservingKeyboard = false
         }
         

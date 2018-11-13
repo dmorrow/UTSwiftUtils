@@ -61,21 +61,12 @@ public extension String {
         let range = NSMakeRange(0, linkString.length)
         
         linkString.beginEditing()
-        linkString.addAttribute(NSLinkAttributeName, value: link, range: range)
-        linkString.addAttribute(NSForegroundColorAttributeName, value: linkColor, range: range)
-        linkString.addAttribute(NSUnderlineStyleAttributeName, value: NSUnderlineStyle.styleNone.rawValue, range: range)
+        linkString.addAttribute(NSAttributedString.Key.link, value: link, range: range)
+        linkString.addAttribute(NSAttributedString.Key.foregroundColor, value: linkColor, range: range)
+        linkString.addAttribute(NSAttributedString.Key.underlineStyle, value: [], range: range)
         linkString.endEditing()
 
         return linkString
-    }
-    
-    //https://gist.github.com/robnadin/2720534f91702c444b6b9bde0fdfe224
-    
-    public func nsRange(from range: Range<String.Index>) -> NSRange {
-        let from = range.lowerBound.samePosition(in: utf16)
-        let to = range.upperBound.samePosition(in: utf16)
-        return NSRange(location: utf16.distance(from: utf16.startIndex, to: from),
-                       length: utf16.distance(from: from, to: to))
     }
     
     public func range(from nsRange: NSRange) -> Range<String.Index>? {
@@ -123,7 +114,7 @@ public extension String {
             endIndex = self.endIndex
         }
         
-        return self[startIndex ..< endIndex]
+        return String(self[startIndex ..< endIndex])
     }
     
     public func substring(from: Int) -> String {
@@ -186,5 +177,13 @@ public extension UnicodeScalar {
             
         default: return false
         }
+    }
+}
+
+//https://stackoverflow.com/a/43233619/1189470/
+
+public extension StringProtocol where Index == String.Index {
+    func nsRange(from range: Range<Index>) -> NSRange {
+        return NSRange(range, in: self)
     }
 }
