@@ -27,54 +27,54 @@ extension NSMutableAttributedString
         }
     }
     
-    public func setAttribute(_ name:String, value:AnyObject) {
+    public func setAttribute(_ name: NSAttributedString.Key, value:AnyObject) {
         self.removeAttribute(name, range: self.range)
         self.addAttribute(name, value: value, range: self.range)
     }
     
     public var backgroundColor:UIColor {
         get {
-            return self.attribute(NSBackgroundColorAttributeName, at: 0, effectiveRange: nil) as! UIColor
+            return self.attribute(NSAttributedString.Key.backgroundColor, at: 0, effectiveRange: nil) as! UIColor
         }
         set {
-            self.setAttribute(NSBackgroundColorAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.backgroundColor, value: newValue)
         }
     }
     
     public var baselineOffset:CGFloat {
         get {
-            return CGFloat(((self.attribute(NSBaselineOffsetAttributeName, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
+            return CGFloat(((self.attribute(NSAttributedString.Key.baselineOffset, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
         }
         set {
-            self.setAttribute(NSBaselineOffsetAttributeName, value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.baselineOffset, value: newValue as AnyObject)
         }
     }
     
     public var font:UIFont {
         get {
-            return self.attribute(NSFontAttributeName, at: 0, effectiveRange: nil) as! UIFont
+            return self.attribute(NSAttributedString.Key.font, at: 0, effectiveRange: nil) as! UIFont
         }
         set {
-            self.setAttribute(NSFontAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.font, value: newValue)
         }
     }
     
     public var color:UIColor {
         get {
-            return self.attribute(NSForegroundColorAttributeName, at: 0, effectiveRange: nil) as! UIColor
+            return self.attribute(NSAttributedString.Key.foregroundColor, at: 0, effectiveRange: nil) as! UIColor
         }
         
         set {
-            self.setAttribute(NSForegroundColorAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.foregroundColor, value: newValue)
         }
     }
     
     public var kerning:CGFloat {
         get {
-            return CGFloat(((self.attribute(NSKernAttributeName, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
+            return CGFloat(((self.attribute(NSAttributedString.Key.kern, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
         }
         set {
-            self.setAttribute(NSKernAttributeName, value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.kern, value: newValue as AnyObject)
         }
     }
     
@@ -93,80 +93,79 @@ extension NSMutableAttributedString
     
     public var ligature:Int {
         get {
-            return ((self.attribute(NSLigatureAttributeName, at: 0, effectiveRange: nil) as AnyObject).intValue)!
+            return ((self.attribute(NSAttributedString.Key.ligature, at: 0, effectiveRange: nil) as AnyObject).intValue)!
         }
         set {
-            self.setAttribute(NSLigatureAttributeName, value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.ligature, value: newValue as AnyObject)
         }
     }
     
     public var link:URL {
         get {
-            return self.attribute(NSLinkAttributeName, at: 0, effectiveRange: nil) as! URL
+            return self.attribute(NSAttributedString.Key.link, at: 0, effectiveRange: nil) as! URL
         }
         set {
-            self.setAttribute(NSLinkAttributeName, value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.link, value: newValue as AnyObject)
         }
     }
     
     public var strokeWidth:CGFloat {
         get {
-            return CGFloat(((self.attribute(NSStrokeWidthAttributeName, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
+            return CGFloat(((self.attribute(NSAttributedString.Key.strokeWidth, at: 0, effectiveRange: nil) as AnyObject).floatValue)!)
         }
         set {
-            self.setAttribute(NSStrokeWidthAttributeName, value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.strokeWidth, value: newValue as AnyObject)
         }
     }
     
     public var strokeColor:UIColor {
         get {
-            return self.attribute(NSStrokeColorAttributeName, at: 0, effectiveRange: nil) as! UIColor
+            return self.attribute(NSAttributedString.Key.strokeColor, at: 0, effectiveRange: nil) as! UIColor
         }
         set {
-            self.setAttribute(NSStrokeColorAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.strokeColor, value: newValue)
         }
     }
     
     var superscript:Int {
         get {
-            return ((self.attribute(String(kCTSuperscriptAttributeName), at: 0, effectiveRange: nil) as AnyObject).intValue)!
+            return ((self.attribute(NSAttributedString.Key(rawValue: String(kCTSuperscriptAttributeName)), at: 0, effectiveRange: nil) as AnyObject).intValue)!
         }
         set {
-            self.setAttribute(String(kCTSuperscriptAttributeName), value: newValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key(rawValue: String(kCTSuperscriptAttributeName)), value: newValue as AnyObject)
         }
     }
     
     public var underlineColor:UIColor {
         get {
-            return self.attribute(NSUnderlineColorAttributeName, at: 0, effectiveRange: nil) as! UIColor
+            return self.attribute(NSAttributedString.Key.underlineColor, at: 0, effectiveRange: nil) as! UIColor
         }
         set {
-            self.setAttribute(NSUnderlineColorAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.underlineColor, value: newValue)
         }
     }
     
     public var underlineStyle:NSUnderlineStyle {
         get {
-            if let style =  NSUnderlineStyle(rawValue: ((self.attribute(NSUnderlineStyleAttributeName, at: 0, effectiveRange: nil) as AnyObject).intValue)!)
-            {
+            if let style = self.attribute(NSAttributedString.Key.underlineStyle, at: 0, effectiveRange: nil) as? NSUnderlineStyle {
                 return style
             }
-            return NSUnderlineStyle.styleNone
+            return []
         }
         set {
-            self.setAttribute(NSUnderlineStyleAttributeName, value: newValue.rawValue as AnyObject)
+            self.setAttribute(NSAttributedString.Key.underlineStyle, value: newValue.rawValue as AnyObject)
         }
     }
     
     public var paragraphStyle:NSParagraphStyle {
         get {
-            if let  existingParagraphStyle = self.attribute(NSParagraphStyleAttributeName, at: 0, effectiveRange: nil) as? NSParagraphStyle {
+            if let  existingParagraphStyle = self.attribute(NSAttributedString.Key.paragraphStyle, at: 0, effectiveRange: nil) as? NSParagraphStyle {
                 return existingParagraphStyle
             }
             return NSParagraphStyle.default
         }
         set {
-            self.setAttribute(NSParagraphStyleAttributeName, value: newValue)
+            self.setAttribute(NSAttributedString.Key.paragraphStyle, value: newValue)
         }
     }
     

@@ -10,6 +10,7 @@ import Foundation
 extension NSObject {
     public typealias cancellable_closure = (() -> ())?
     
+    @discardableResult
     public func delay(_ delay:TimeInterval, closure:@escaping ()->()) -> cancellable_closure{
         
         var cancelled = false

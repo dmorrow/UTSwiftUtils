@@ -47,7 +47,7 @@ open class PlaceholderTextView: UITextView {
     }
     
     private func commonInit() {
-        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(textDidChange), name: UITextView.textDidChangeNotification, object: nil)
         
         placeholderLabel.textAlignment = textAlignment
         placeholderLabel.numberOfLines = 0
@@ -89,7 +89,7 @@ open class PlaceholderTextView: UITextView {
     }
     
     deinit {
-        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UITextViewTextDidChange, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UITextView.textDidChangeNotification, object: nil)
     }
     
     

@@ -59,7 +59,7 @@ extension UIColor {
      */
     public static var defaultBlue:UIColor {
         get {
-            return UIButton(type:UIButtonType.system).titleColor(for: UIControlState())!
+            return UIButton(type:UIButton.ButtonType.system).titleColor(for: UIControl.State.normal)!
         }
     }
     
